@@ -1,0 +1,26 @@
+GET http://localhost:3000/tables HTTP/1.1
+
+###
+
+POST http://localhost:3000/sendEmail
+Content-Type: application/json
+{
+  "destinatarios": "dgchaarturo@gmail.com",
+  "asunto": "Asunto del correo",
+  "mensaje": "Mensaje del correo"
+}
+
+###
+POST http://localhost:3000/sendEmail
+Content-Type: application/json
+
+{
+  "destinatarios": "dgchaarturo@gmail.com",
+  "asunto": "Asunto del correo",
+  "mensaje": "Mensaje del correo"
+}
+
+
+
+
+

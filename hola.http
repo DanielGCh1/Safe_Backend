@@ -1,14 +1,9 @@
-GET http://localhost:3000/tables HTTP/1.1
+GET http://localhost:3000/tables 
 
 ###
 
-POST http://localhost:3000/sendEmail
-Content-Type: application/json
-{
-  "destinatarios": "dgchaarturo@gmail.com",
-  "asunto": "Asunto del correo",
-  "mensaje": "Mensaje del correo"
-}
+GET http://localhost:3000/getPassengers
+
 
 ###
 POST http://localhost:3000/sendEmail
@@ -20,7 +15,59 @@ Content-Type: application/json
   "mensaje": "Mensaje del correo"
 }
 
+###
+POST http://localhost:3000/setPassenger
+Content-Type: application/json
 
+{
+  "pasa_cedula": "1234567890",
+  "pasa_pasaporte": "AB123456",
+  "pasa_primer_nombre": "Juan",
+  "pasa_segundo_nombre": "Enrique",
+  "pasa_primer_apellido": "Pérez",
+  "pasa_segundo_apellido": "García",
+  "pasa_fk_pais": 1,
+  "pasa_lugar_residencia": "Ciudad de México",
+  "pasa_fecha_nacimiento": "1980-01-01T00:00:00.000Z",
+  "pasa_nacionalidad": "Mexicano"
+}
 
+###
 
+POST http://localhost:3000/pasajeros/1658752/97854s HTTP/1.1
+Content-Type: application/json
 
+{
+  "pasa_primer_nombre": "Robert",
+  "pasa_segundo_nombre": "José",
+  "pasa_primer_apellido": "Martínez",
+  "pasa_segundo_apellido": "González",
+  "pasa_fk_pais":  1,
+  "pasa_lugar_residencia": "Los chiles",
+  "pasa_fecha_nacimiento":     "1997-08-10T03:22:23.000Z",
+  "pasa_nacionalidad":  "Costarricense"
+}
+
+###
+POST http://localhost:3000/setCountry
+Content-Type: application/json
+
+{
+  "pais_nombre": "Canada"
+}
+
+###
+
+GET http://192.168.1.104:80/releOn
+
+###
+
+GET http://192.168.1.104:80/releOff
+
+###
+
+GET http://localhost:3000/releOn
+
+###
+
+GET http://localhost:3000/releOff
